@@ -42,13 +42,13 @@ app.on('ready', () => {
       }
     ]));
 
-  mainWindow.on('close', function (event) {
-    if (!isQuiting) {
-      event.preventDefault();
-      mainWindow.hide();
-      event.returnValue = false;
-    }
-  });
+    mainWindow.on('close', function (event) {
+      if (!isQuiting) {
+        event.preventDefault();
+        mainWindow.hide();
+        event.returnValue = false;
+      }
+    });
 });
 
 // Quit when all windows are closed, except on macOS. There, it's common
